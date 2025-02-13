@@ -230,8 +230,8 @@ body::-webkit-scrollbar {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: clamp(0.5rem, 3vw, 2.5rem);
-    padding: clamp(0.5rem, 3vw, 2.5rem);
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding: clamp(1rem, 3vw, 2.5rem);
 }
 
 .gallery-item {
@@ -253,7 +253,7 @@ body::-webkit-scrollbar {
 
 .gallery-item img {
     width: 100%;
-    height: clamp(170px, 25vw, 230px);
+    height: clamp(180px, 30vw, 250px);
     object-fit: cover;
     border-radius: var(--border-radius-sm);
     transition: all 0.3s ease;
@@ -383,7 +383,7 @@ body::-webkit-scrollbar {
 .modal-image-container {
     position: relative;
     width: 100%;
-    padding-top: 78%;
+    padding-top: 133.33%; /* 3:4 Aspect Ratio for portrait */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
