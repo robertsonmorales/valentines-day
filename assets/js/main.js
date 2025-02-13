@@ -181,3 +181,5 @@ window.addEventListener('resize', () => {
         gallery.style.height = '80vh';
     }
 });
+
+
