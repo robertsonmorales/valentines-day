@@ -21,9 +21,18 @@ A beautiful and interactive Valentine's Day surprise webpage featuring an animat
 
 ## 📱 Preview
 
+## 🤝 Contributing
+Feel free to fork this project and customize it for your valentine! If you have any improvements or bug fixes, PRs are welcome.
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/stevencodelab/valentines-gift.git
+```
+
+## 💖 Credits
+Created with love by Stevencodelab
+
+
+
