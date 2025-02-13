@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Gift</title>
+    <!-- CDN Links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom Css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Icon -->
+    <link rel="Icon" href="icon/icon.png"> 
+</head>
+<body>
+
+     <!-- Modal Structure -->
+     <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Our Special Moments ❤️</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-image-container">
+                <img src="" alt="" class="modal-image">
+                <div class="modal-nav">
+                    <button class="prev-btn" onclick="changeImage(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn" onclick="changeImage(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-caption"></div>
+            
+            <!-- Decorative Hearts -->
+            <span class="heart-decoration" style="top: 10px; left: 10px;">❤️</span>
+            <span class="heart-decoration" style="top: 10px; right: 10px;">❤️</span>
+            <span class="heart-decoration" style="bottom: 10px; left: 10px;">❤️</span>
+            <span class="heart-decoration" style="bottom: 10px; right: 10px;">❤️</span>
+        </div>
+    </div>
+
+    <div class="welcome-message">
+        <h1>Happy Valentine's Day! ❤️</h1>
+        <p>Click the button below to open your special gift</p>
+        <button class="start-button">Open Gift</button>
+    </div>
+
+    <div class="floating-hearts"></div>
+    <div class="gift-container">
+        <div class="gift-box">
+            <!-- <div class="ribbon"></div> -->
+            <div class="side front">
+                <div class="heart"></div>
+            </div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top"></div>
+            <div class="side bottom"></div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item" style="--rotation: -3deg; --delay: 0s; --tape-rotation: -45deg;">
+                    <div class="polaroid-tape left"></div>
+                    <div class="polaroid-tape right"></div>
+                    <img src="assets/gallery/1.jpg" alt="Romantic moment 1">
+                    <div class="gallery-caption">Our First Date ❤️</div>
+                </div>
+                <div class="gallery-item" style="--rotation: 2deg; --delay: 0.2s; --tape-rotation: 45deg;">
+                    <div class="polaroid-tape left"></div>
+                    <div class="polaroid-tape right"></div>
+                    <img src="assets/gallery/1.jpg" alt="Romantic moment 2">
+                    <div class="gallery-caption">Beautiful Sunset Together 🌅</div>
+                </div>
+                <div class="gallery-item" style="--rotation: -2deg; --delay: 0.4s; --tape-rotation: -30deg;">
+                    <div class="polaroid-tape left"></div>
+                    <div class="polaroid-tape right"></div>
+                    <img src="assets/gallery/1.jpg" alt="Romantic moment 3">
+                    <div class="gallery-caption">Perfect Evening 🌙</div>
+                </div>
+                <div class="gallery-item" style="--rotation: 3deg; --delay: 0.6s; --tape-rotation: 30deg;">
+                    <div class="polaroid-tape left"></div>
+                    <div class="polaroid-tape right"></div>
+                    <img src="assets/gallery/1.jpg" alt="Romantic moment 4">
+                    <div class="gallery-caption">Sweet Memories 💕</div>
+                </div>
+                <div class="gallery-item" style="--rotation: -1deg; --delay: 0.8s; --tape-rotation: -40deg;">
+                    <div class="polaroid-tape left"></div>
+                    <div class="polaroid-tape right"></div>
+                    <img src="assets/gallery/1.jpg" alt="Romantic moment 5">
+                    <div class="gallery-caption">Together Forever 💑</div>
+                </div>
+                <div class="gallery-item" style="--rotation: 2deg; --delay: 1s; --tape-rotation: 40deg;">
+                    <div class="polaroid-tape left"></div>
+                    <div class="polaroid-tape right"></div>
+                    <img src="assets/gallery/1.jpg" alt="Romantic moment 6">
+                    <div class="gallery-caption">Happy Moments ✨</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="music-toggle">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <div class="credits">Made with ❤️ by Stevencodelab</div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
