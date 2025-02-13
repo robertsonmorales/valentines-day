@@ -9,7 +9,7 @@ let isOpen = false;
 let isPlaying = false;
 
 // Create audio element
-const bgMusic = new Audio('audio/background-music.mp3');
+const bgMusic = new Audio('assets/audio/background-music.mp3');
 bgMusic.loop = true;
 
 // Event listener for start button
@@ -183,3 +183,87 @@ window.addEventListener('resize', () => {
 });
 
 
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.querySelector('.modal-title');
+const modalDescription = document.querySelector('.modal-description');
+const modalQuote = document.querySelector('.modal-quote');
+const closeModal = document.querySelector('.close-modal');
+
+// Image content data
+// const imageContent = {
+//     'romantic-moment-1': {
+//         title: 'Our First Date',
+//         description: 'The moment our hearts first danced together, creating memories that would last a lifetime.',
+//         quote: '"Every love story is beautiful, but ours is my favorite."'
+//     },
+//     'romantic-moment-2': {
+//         title: 'Beautiful Sunset Together',
+//         description: 'Watching the sun paint the sky in shades of love, while our hearts grew closer.',
+//         quote: '"The best thing to hold onto in life is each other."'
+//     },
+//     'romantic-moment-3': {
+//         title: 'Perfect Evening',
+//         description: 'Under the moonlight, every moment with you becomes magical and unforgettable.',
+//         quote: '"In your arms is where I belong."'
+//     },
+//     'romantic-moment-4': {
+//         title: 'Sweet Memories',
+//         description: 'Each smile, each laugh, each tender moment builds our beautiful story together.',
+//         quote: '"You are my today and all of my tomorrows."'
+//     },
+//     'romantic-moment-5': {
+//         title: 'Sweet Memories',
+//         description: 'Each smile, each laugh, each tender moment builds our beautiful story together.',
+//         quote: '"You are my today and all of my tomorrows."'
+//     },
+//     'romantic-moment-6': {
+//         title: 'Sweet Memories',
+//         description: 'Each smile, each laugh, each tender moment builds our beautiful story together.',
+//         quote: '"You are my today and all of my tomorrows."'
+//     },
+
+// };
+
+// Update gallery item click listeners
+galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        const imageId = `romantic-moment-${index + 1}`;
+        const content = imageContent[imageId];
+        
+        modalImage.src = item.querySelector('img').src;
+        modalImage.alt = item.querySelector('img').alt;
+        modalTitle.textContent = content.title;
+        modalDescription.textContent = content.description;
+        modalQuote.textContent = content.quote;
+        
+        modal.style.display = 'block';
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+        
+        createHeartBurst();
+    });
+});
+
+// Close modal events
+closeModal.addEventListener('click', closeModalFunction);
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModalFunction();
+    }
+});
+
+function closeModalFunction() {
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+}
+
+// Close modal with escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModalFunction();
+    }
+});

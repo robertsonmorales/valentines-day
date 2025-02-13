@@ -86,3 +86,10 @@
         margin-bottom: var(--spacing-lg);
     }
 }
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+}
