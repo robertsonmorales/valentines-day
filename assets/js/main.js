@@ -5,16 +5,11 @@ const giftBox = document.querySelector('.gift-box');
 const gallery = document.querySelector('.gallery');
 const floatingHeartsContainer = document.querySelector('.floating-hearts');
 const musicToggle = document.querySelector('.music-toggle');
-const modal = document.getElementById('imageModal');
-const modalImage = modal.querySelector('.modal-image');
-const modalCaption = modal.querySelector('.modal-caption');
-const galleryItems = document.querySelectorAll('.gallery-item');
-let currentImageIndex = 0;       
 let isOpen = false;
 let isPlaying = false;
 
 // Create audio element
-const bgMusic = new Audio('assets/audio/background-music.mp3');
+const bgMusic = new Audio('audio/background-music.mp3');
 bgMusic.loop = true;
 
 // Event listener for start button
@@ -165,19 +160,11 @@ gallery.addEventListener('touchmove', (e) => {
     }
 });
 
-// Add hover effect and click events for gallery items
+// Add gallery item hover effect
+const galleryItems = document.querySelectorAll('.gallery-item');
 galleryItems.forEach(item => {
-    // Hover effect
     item.addEventListener('mouseenter', () => {
         createHeartBurst();
-    });
-
-    // Click event for modal
-    item.addEventListener('click', (_, index) => {
-        currentImageIndex = Array.from(galleryItems).indexOf(item);
-        updateModalImage();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
     });
 });
 
@@ -193,45 +180,4 @@ window.addEventListener('resize', () => {
     } else {
         gallery.style.height = '80vh';
     }
-});
-
-// Close modal when clicking close button or outside
-modal.querySelector('.modal-close').addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-});
-
-function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scrolling
-}
-
-function changeImage(direction) {
-    currentImageIndex = (currentImageIndex + direction + galleryItems.length) % galleryItems.length;
-    updateModalImage();
-}
-
-function updateModalImage() {
-    const currentItem = galleryItems[currentImageIndex];
-    const img = currentItem.querySelector('img');
-    const caption = currentItem.querySelector('.gallery-caption');
-    
-    modalImage.src = img.src;
-    modalImage.alt = img.alt;
-    modalCaption.textContent = caption.textContent;
-    
-    // Add fade effect
-    modalImage.style.opacity = '0';
-    setTimeout(() => {
-        modalImage.style.opacity = '1';
-    }, 50);
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (!modal.classList.contains('active')) return;
-    
-    if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowLeft') changeImage(-1);
-    if (e.key === 'ArrowRight') changeImage(1);
 });
