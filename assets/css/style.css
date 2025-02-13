@@ -383,7 +383,7 @@ body::-webkit-scrollbar {
 .modal-image-container {
     position: relative;
     width: 100%;
-    padding-top: 78%;
+    padding-top: 120%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
