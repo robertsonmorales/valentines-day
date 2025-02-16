@@ -188,12 +188,12 @@ window.addEventListener('resize', () => {
 });
 
 
-const modal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const modalTitle = document.querySelector('.modal-title');
-const modalDescription = document.querySelector('.modal-description');
-const modalQuote = document.querySelector('.modal-quote');
-const closeModal = document.querySelector('.close-modal');
+// const modal = document.getElementById('imageModal');
+// const modalImage = document.getElementById('modalImage');
+// const modalTitle = document.querySelector('.modal-title');
+// const modalDescription = document.querySelector('.modal-description');
+// const modalQuote = document.querySelector('.modal-quote');
+// const closeModal = document.querySelector('.close-modal');
 
 // Image content data
 // const imageContent = {
@@ -231,44 +231,44 @@ const closeModal = document.querySelector('.close-modal');
 // };
 
 // Update gallery item click listeners
-galleryItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        const imageId = `romantic-moment-${index + 1}`;
-        const content = imageContent[imageId];
+// galleryItems.forEach((item, index) => {
+//     item.addEventListener('click', () => {
+//         const imageId = `romantic-moment-${index + 1}`;
+//         const content = imageContent[imageId];
         
-        modalImage.src = item.querySelector('img').src;
-        modalImage.alt = item.querySelector('img').alt;
-        modalTitle.textContent = content.title;
-        modalDescription.textContent = content.description;
-        modalQuote.textContent = content.quote;
+//         modalImage.src = item.querySelector('img').src;
+//         modalImage.alt = item.querySelector('img').alt;
+//         modalTitle.textContent = content.title;
+//         modalDescription.textContent = content.description;
+//         modalQuote.textContent = content.quote;
         
-        modal.style.display = 'block';
-        setTimeout(() => {
-            modal.classList.add('show');
-        }, 10);
+//         modal.style.display = 'block';
+//         setTimeout(() => {
+//             modal.classList.add('show');
+//         }, 10);
         
-        createHeartBurst();
-    });
-});
+//         createHeartBurst();
+//     });
+// });
 
 // Close modal events
-closeModal.addEventListener('click', closeModalFunction);
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModalFunction();
-    }
-});
+// closeModal.addEventListener('click', closeModalFunction);
+// modal.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//         closeModalFunction();
+//     }
+// });
 
-function closeModalFunction() {
-    modal.classList.remove('show');
-    setTimeout(() => {
-        modal.style.display = 'none';
-    }, 300);
-}
+// function closeModalFunction() {
+//     modal.classList.remove('show');
+//     setTimeout(() => {
+//         modal.style.display = 'none';
+//     }, 300);
+// }
 
-// Close modal with escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-        closeModalFunction();
-    }
-});
+// // Close modal with escape key
+// document.addEventListener('keydown', (e) => {
+//     if (e.key === 'Escape' && modal.style.display === 'block') {
+//         closeModalFunction();
+//     }
+// });
