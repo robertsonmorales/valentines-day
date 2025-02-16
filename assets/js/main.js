@@ -9,7 +9,7 @@ let isOpen = false;
 let isPlaying = false;
 
 // Create audio element
-const bgMusic = new Audio('assets/audio/background-music.mp3');
+const bgMusic = new Audio('https://youtu.be/IpFX2vq8HKw');
 bgMusic.loop = true;
 
 // Event listener for start button
@@ -36,6 +36,11 @@ giftBox.addEventListener('click', () => {
 
 // Music toggle
 musicToggle.addEventListener('click', () => {
+    playMusic();
+});
+
+// playMusic();
+function playMusic(){
     if (isPlaying) {
         bgMusic.pause();
         musicToggle.innerHTML = '<i class="fas fa-music"></i>';
@@ -44,7 +49,7 @@ musicToggle.addEventListener('click', () => {
         musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
     }
     isPlaying = !isPlaying;
-});
+}
 
 // function to create heart
 function createHeart() {

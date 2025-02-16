@@ -1,7 +1,7 @@
 /* Global Variables */
 :root {
-    --primary-color: #ff1493;
-    --secondary-color: #ff69b4;
+    --primary-color: #dd403d;
+    --secondary-color: #e75a41;
     --white: #ffffff;
     --black: #000000;
     --shadow-color: rgba(0, 0, 0, 0.2);
@@ -242,6 +242,7 @@ body::-webkit-scrollbar{
 }
 
 .gallery-item {
+    text-decoration: none;
     background: var(--white);
     padding: clamp(0.8rem, 2vw, 1.2rem);
     border-radius: var(--border-radius-md);
@@ -260,6 +261,7 @@ body::-webkit-scrollbar{
 
 .gallery-item img {
     width: 100%;
+    height: 90%;
     object-fit: cover;
     border-radius: var(--border-radius-sm);
     transition: all 0.1s ease;
@@ -338,7 +340,7 @@ body::-webkit-scrollbar{
     position: absolute;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     top: -30px;
     left: calc(50% - 30px);
     transform-origin: bottom;
