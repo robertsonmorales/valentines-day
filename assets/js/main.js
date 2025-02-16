@@ -16,7 +16,7 @@ bgMusic.loop = true;
 startButton.addEventListener('click', () => {
     welcomeMessage.classList.add('hide');
     playMusic();
-    
+
     setTimeout(() => {
         giftContainer.classList.add('show');
         createHeartBurst();
@@ -185,9 +185,9 @@ window.addEventListener('load', () => {
 // Add resize handler
 window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-        gallery.style.height = '70vh';
+        gallery.style.height = '90vh';
     } else {
-        gallery.style.height = '80vh';
+        gallery.style.height = '90vh';
     }
 });
 

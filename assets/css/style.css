@@ -241,6 +241,7 @@ body::-webkit-scrollbar{
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: var(--spacing-md);
     padding: var(--container-padding);
+    height: 100vh;
 }
 
 .gallery-item {
