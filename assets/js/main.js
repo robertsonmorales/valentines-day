@@ -9,12 +9,14 @@ let isOpen = false;
 let isPlaying = false;
 
 // Create audio element
-const bgMusic = new Audio('https://youtu.be/IpFX2vq8HKw');
+const bgMusic = new Audio('./assets/audio/young-romance-chill-131692.mp3');
 bgMusic.loop = true;
 
 // Event listener for start button
 startButton.addEventListener('click', () => {
     welcomeMessage.classList.add('hide');
+    playMusic();
+    
     setTimeout(() => {
         giftContainer.classList.add('show');
         createHeartBurst();
@@ -35,11 +37,10 @@ giftBox.addEventListener('click', () => {
 });
 
 // Music toggle
-// musicToggle.addEventListener('click', () => {
-//     playMusic();
-// });
+musicToggle.addEventListener('click', () => {
+    playMusic();
+});
 
-// playMusic();
 function playMusic(){
     if (isPlaying) {
         bgMusic.pause();
@@ -48,8 +49,11 @@ function playMusic(){
         bgMusic.play();
         musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
     }
+
     isPlaying = !isPlaying;
 }
+
+// playMusic();
 
 // function to create heart
 function createHeart() {

@@ -206,6 +206,8 @@ body::-webkit-scrollbar{
     height: 90%;
     border: 3px dashed rgba(255, 255, 255, 0.7);
     animation: borderPulse 2s ease-in-out infinite;
+    background-image: url('/assets/gallery/432357027_384387814356260_2493077832900199302_n.jpg');
+    background-size: cover;
 }
 
 .side::after {
