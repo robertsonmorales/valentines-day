@@ -35,9 +35,9 @@ giftBox.addEventListener('click', () => {
 });
 
 // Music toggle
-musicToggle.addEventListener('click', () => {
-    playMusic();
-});
+// musicToggle.addEventListener('click', () => {
+//     playMusic();
+// });
 
 // playMusic();
 function playMusic(){
